@@ -39,10 +39,10 @@
       <h1>About the Baker's Dozen CodeU Chat App</h1>
       <p>
         The Baker's Dozen Chat App began as a Google CodeU chat app template from which we built
-        off of throughtout the 2018 Summer. Born and bred on the West Coast with a passion for Computer Science and problem solving,
+        off of throughout the 2018 Summer. Born and bred on the West Coast with a passion for Computer Science and problem solving,
         the Baker's Dozen team consists of Los Angeles natives Gaby Cortes and Talia Bahar and Bay Area native Luke Mujica.
-        This Chat App represents a combinaition of the unique skill sets we came into the prgram with in conjunction with the
-        new knlowdge we gained from our Google mentors (Shoutout Edrei Chua), peers, and eachother.
+        This Chat App represents a combination of the unique skill sets we came into the prgram with in conjunction with the
+        new knowledge we gained from our Google mentors (Shoutout Edrei Chua), peers, and eachother.
 
         Here's some stuff to think about:
       </p>
