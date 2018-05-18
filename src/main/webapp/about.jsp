@@ -42,7 +42,7 @@
         off of throughout the 2018 Summer. Born and bred on the West Coast with a passion for Computer Science and problem solving,
         the Baker's Dozen team consists of Los Angeles natives Gaby Cortes and Talia Bahar and Bay Area native Luke Mujica.
         This Chat App represents a combination of the unique skill sets we came into the prgram with in conjunction with the
-        new knowledge we gained from our Google mentors (Shoutout Edrei Chua), peers, and eachother.
+        new knowledge we gained from our Google mentors (Shoutout Edrei Chua), peers, and each other.
 
         Here's some stuff to think about:
       </p>
