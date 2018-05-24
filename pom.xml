@@ -94,6 +94,11 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.kefirsf</groupId>
+      <artifactId>kefirbb</artifactId>
+      <version>1.5</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -107,4 +112,3 @@
   </build>
 
 </project>
-
