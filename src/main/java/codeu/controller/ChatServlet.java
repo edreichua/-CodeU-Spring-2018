@@ -86,6 +86,8 @@ public class ChatServlet extends HttpServlet {
       throws IOException, ServletException {
     String requestUrl = request.getRequestURI();
     String conversationTitle = requestUrl.substring("/chat/".length());
+    
+    //request.getRequestDispatcher("/WEB-INF/view/chat.jsp").forward(request, response);
 
     Conversation conversation = conversationStore.getConversationWithTitle(conversationTitle);
     if (conversation == null) {
@@ -110,6 +112,7 @@ public class ChatServlet extends HttpServlet {
    * submitted form data. It creates a new Message from that data, adds it to the model, and then
    * redirects back to the chat page.
    */
+  
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response)
       throws IOException, ServletException {
