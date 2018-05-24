@@ -38,15 +38,17 @@ public class PersistentDataStoreTest {
 
   @Test
   public void testSaveAndLoadUsers() throws PersistentDataStoreException {
-    UUID idOne = UUID.randomUUID();
+    UUID idOne = UUID.fromString("10000000-2222-3333-4444-555555555555");
     String nameOne = "test_username_one";
+    String passwordHashOne = "$2a$10$BNte6sC.qoL4AVjO3Rk8ouY6uFaMnsW8B9NjtHWaDNe8GlQRPRT1S";
     Instant creationOne = Instant.ofEpochMilli(1000);
-    User inputUserOne = new User(idOne, nameOne, creationOne);
+    User inputUserOne = new User(idOne, nameOne, passwordHashOne, creationOne);
 
-    UUID idTwo = UUID.randomUUID();
+    UUID idTwo = UUID.fromString("10000001-2222-3333-4444-555555555555");
     String nameTwo = "test_username_two";
+    String passwordHashTwo = "$2a$10$ttaMOMMGLKxBBuTN06VPvu.jVKif.IczxZcXfLcqEcFi1lq.sLb6i";
     Instant creationTwo = Instant.ofEpochMilli(2000);
-    User inputUserTwo = new User(idTwo, nameTwo, creationTwo);
+    User inputUserTwo = new User(idTwo, nameTwo, passwordHashTwo, creationTwo);
 
     // save
     persistentDataStore.writeThrough(inputUserOne);
@@ -59,24 +61,26 @@ public class PersistentDataStoreTest {
     User resultUserOne = resultUsers.get(0);
     Assert.assertEquals(idOne, resultUserOne.getId());
     Assert.assertEquals(nameOne, resultUserOne.getName());
+    Assert.assertEquals(passwordHashOne, resultUserOne.getPasswordHash());
     Assert.assertEquals(creationOne, resultUserOne.getCreationTime());
 
     User resultUserTwo = resultUsers.get(1);
     Assert.assertEquals(idTwo, resultUserTwo.getId());
     Assert.assertEquals(nameTwo, resultUserTwo.getName());
+    Assert.assertEquals(passwordHashTwo, resultUserTwo.getPasswordHash());
     Assert.assertEquals(creationTwo, resultUserTwo.getCreationTime());
   }
 
   @Test
   public void testSaveAndLoadConversations() throws PersistentDataStoreException {
-    UUID idOne = UUID.randomUUID();
-    UUID ownerOne = UUID.randomUUID();
+    UUID idOne = UUID.fromString("10000000-2222-3333-4444-555555555555");
+    UUID ownerOne = UUID.fromString("10000001-2222-3333-4444-555555555555");
     String titleOne = "Test_Title";
     Instant creationOne = Instant.ofEpochMilli(1000);
     Conversation inputConversationOne = new Conversation(idOne, ownerOne, titleOne, creationOne);
 
-    UUID idTwo = UUID.randomUUID();
-    UUID ownerTwo = UUID.randomUUID();
+    UUID idTwo = UUID.fromString("10000002-2222-3333-4444-555555555555");
+    UUID ownerTwo = UUID.fromString("10000003-2222-3333-4444-555555555555");
     String titleTwo = "Test_Title_Two";
     Instant creationTwo = Instant.ofEpochMilli(2000);
     Conversation inputConversationTwo = new Conversation(idTwo, ownerTwo, titleTwo, creationTwo);
@@ -104,17 +108,17 @@ public class PersistentDataStoreTest {
 
   @Test
   public void testSaveAndLoadMessages() throws PersistentDataStoreException {
-    UUID idOne = UUID.randomUUID();
-    UUID conversationOne = UUID.randomUUID();
-    UUID authorOne = UUID.randomUUID();
+    UUID idOne = UUID.fromString("10000000-2222-3333-4444-555555555555");
+    UUID conversationOne = UUID.fromString("10000001-2222-3333-4444-555555555555");
+    UUID authorOne = UUID.fromString("10000002-2222-3333-4444-555555555555");
     String contentOne = "test content one";
     Instant creationOne = Instant.ofEpochMilli(1000);
     Message inputMessageOne =
         new Message(idOne, conversationOne, authorOne, contentOne, creationOne);
 
-    UUID idTwo = UUID.randomUUID();
-    UUID conversationTwo = UUID.randomUUID();
-    UUID authorTwo = UUID.randomUUID();
+    UUID idTwo = UUID.fromString("10000003-2222-3333-4444-555555555555");
+    UUID conversationTwo = UUID.fromString("10000004-2222-3333-4444-555555555555");
+    UUID authorTwo = UUID.fromString("10000005-2222-3333-4444-555555555555");
     String contentTwo = "test content one";
     Instant creationTwo = Instant.ofEpochMilli(2000);
     Message inputMessageTwo =
