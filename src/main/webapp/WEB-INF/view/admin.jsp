@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Baker's Dozen Chat App</title>
+  <title>Load Test Data</title>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
@@ -24,20 +24,13 @@
   <%@ include file = "/WEB-INF/view/header.jsp" %>
 
   <div id="container">
-    <div
-      style="width:75%; margin-left:auto; margin-right:auto; margin-top: 50px;">
-
-      <h1>Baker's Dozen Chat App</h1>
-      <h2>Welcome!</h2>
-
-      <ul>
-        <li><a href="/login">Login</a> to get started.</li>
-        <li>Go to the <a href="/conversations">conversations</a> page to
-            create or join a conversation.</li>
-        <li>View the <a href="/about.jsp">about</a> page to learn more about the
-            project.</li>
-      </ul>
-    </div>
+    <h1>Load Test Data</h1>
+    <p>This will load a number of users, conversations, and messages for testing
+        purposes.</p>
+    <form action="/testdata" method="POST">
+      <button type="submit" value="confirm" name="confirm">Confirm</button>
+      <button type="submit" value="cancel" name="cancel">Do Nothing</button>
+    </form>
   </div>
 </body>
 </html>
