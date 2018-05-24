@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet {
 
   /** Store class that gives access to Users. */
   private UserStore userStore;
+  private static String[] admins = {"Luke", "Talia", "Gaby"};
 
   /**
    * Set up state for handling login-related requests. This method is only called when running in a
@@ -76,6 +77,12 @@ public class LoginServlet extends HttpServlet {
     if (!userStore.isUserRegistered(username)) {
       User user = new User(UUID.randomUUID(), username, Instant.now());
       userStore.addUser(user);
+      for (String name : admins) {
+        if (name.equals(username)) {
+          request.getSession().setAttribute("admin", "admin");
+          break;
+        }
+      }
     }
 
     request.getSession().setAttribute("user", username);
