@@ -17,7 +17,7 @@
 <%@ page import="codeu.model.data.Conversation" %>
 <%@ page import="codeu.model.data.Message" %>
 <%@ page import="codeu.model.store.basic.UserStore" %>
-<%@ page import="codeu.style" %>
+<%@ page import="codeu.style.TextStyling" %>
 
 <%
 Conversation conversation = (Conversation) request.getAttribute("conversation");
@@ -63,8 +63,9 @@ List<Message> messages = (List<Message>) request.getAttribute("messages");
       for (Message message : messages) {
         String author = UserStore.getInstance()
           .getUser(message.getAuthorId()).getName();
+        String messageContent = message.getContent();
     %>
-      <li><strong><%= author %>:</strong> <%= message.getContent()%></li>
+      <li><strong><%= author %>:</strong> <%= TextStyling.BBCodeToHTML(messageContent)%></li>
 
     <%
       }

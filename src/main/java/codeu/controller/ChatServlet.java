@@ -149,7 +149,8 @@ public class ChatServlet extends HttpServlet {
             conversation.getId(),
             user.getId(),
             cleanedMessageContent,
-            Instant.now());
+            Instant.now()
+            );
 
     messageStore.addMessage(message);
 
