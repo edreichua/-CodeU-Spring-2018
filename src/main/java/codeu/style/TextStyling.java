@@ -1,8 +1,7 @@
 package codeu.style;
 
-import org.kefirsf.bb.TextProcessor;
 import org.kefirsf.bb.BBProcessorFactory;
-
+import org.kefirsf.bb.TextProcessor;
 
 public class TextStyling {
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
