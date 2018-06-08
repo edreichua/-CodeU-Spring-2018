@@ -86,6 +86,7 @@ List<Message> messages = (List<Message>) request.getAttribute("messages");
           <li>Bold Text: [b]text[/b]</li>
           <li>Italicize Text: [i]text[/i]</li>
           <li>Underline Text: [u]text[/u]</li>
+          <li>Strikethrough Text: [s]text[/s]</li>
           <li>Bullet Text:    <br>[list]
                               <br>[*]Entry 1
                               <br>[*]Entry 2
