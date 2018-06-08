@@ -24,19 +24,23 @@ body {
 }
 
 nav {
-  background-color: #283593;
+  background-color: #A1E4FF;
 }
 
 nav a {
   color: white;
   display: inline-block;
-  font-size: 24px;
+  font-size: 28px;
   margin: 15px;
   text-decoration: none;
+  font-family: 'VT323', monospace;
+
 }
 
 #navTitle {
   font-size: 36px;
+  font-family: 'Jockey One', sans-serif;
+  color: #FDFCB0;
 }
 
 #container {
@@ -49,10 +53,34 @@ h1 {
   color: #757575;
 }
 
+#welcomebullets{
+  font-size: 20px;
+}
+
 input {
   font-size: 18px;
 }
 
 button {
   font-size: 18px;
+}
+
+.BBCodeDropdown {
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 8px 10px;
+    z-index: 1;
+}
+
+.BBCodeDropdown:hover .dropdown-content {
+    display: block;
 }
