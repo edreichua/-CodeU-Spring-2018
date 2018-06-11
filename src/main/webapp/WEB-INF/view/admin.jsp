@@ -15,7 +15,6 @@
 <head>
   <title>Load Test Data</title>
   <link rel="stylesheet" href="/css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Jockey+One|Six+Caps|VT323|Voltaire&effect=3d-float" rel="stylesheet">
 </head>
 <body>
 

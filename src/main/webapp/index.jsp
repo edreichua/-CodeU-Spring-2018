@@ -18,7 +18,6 @@
 <head>
   <title>Baker's Dozen Chat App</title>
   <link rel="stylesheet" href="/css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Jockey+One|Six+Caps|VT323|Voltaire&effect=3d-float" rel="stylesheet">
 </head>
 <body>
 
@@ -31,7 +30,7 @@
       <h1>Baker's Dozen Chat App</h1>
       <h2>Welcome!</h2>
 
-      <ul id="welcomebullets">
+      <ul id="welcome-bullets">
         <li><a href="/login">Login</a> to get started.</li>
         <li>Go to the <a href="/conversations">conversations</a> page to
             create or join a conversation.</li>

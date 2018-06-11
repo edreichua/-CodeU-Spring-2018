@@ -29,7 +29,6 @@ List<Message> messages = (List<Message>) request.getAttribute("messages");
 <head>
   <title><%= conversation.getTitle() %></title>
   <link rel="stylesheet" href="/css/main.css" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Jockey+One|Six+Caps|VT323|Voltaire&effect=3d-float" rel="stylesheet">
   <style>
     #chat {
       background-color: white;
@@ -87,10 +86,10 @@ List<Message> messages = (List<Message>) request.getAttribute("messages");
           <li>Italicize Text: [i]text[/i]</li>
           <li>Underline Text: [u]text[/u]</li>
           <li>Strikethrough Text: [s]text[/s]</li>
-          <li>Bullet Text:    <br>[list]
-                              <br>[*]Entry 1
-                              <br>[*]Entry 2
-                              <br>[/list]
+          <li>Bullet Text: <br>[list]
+                           <br>[*]Entry 1
+                           <br>[*]Entry 2
+                           <br>[/list]
           </li>
           <li>Color Text: [color=#hexcode]text[/color]</li>
           <li>Post a Link: [url]site link[/url]</li>

@@ -34,7 +34,6 @@ nav a {
   margin: 15px;
   text-decoration: none;
   font-family: 'VT323', monospace;
-
 }
 
 #navTitle {
@@ -53,7 +52,7 @@ h1 {
   color: #757575;
 }
 
-#welcomebullets{
+#welcome-bullets {
   font-size: 20px;
 }
 
