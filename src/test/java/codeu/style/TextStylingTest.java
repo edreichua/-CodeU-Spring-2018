@@ -4,7 +4,11 @@ import codeu.style.TextStyling;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
+
 public class TextStylingTest {
+  /**
+  * unit tests for TextStyling 
+  */
    @Test
    public void testBold() {
       String boldHTML = "<b>text</b>";
