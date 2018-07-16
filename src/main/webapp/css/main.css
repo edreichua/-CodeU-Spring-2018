@@ -128,7 +128,7 @@ button {
   display:block;
 }
 
-#userMentioned {
+.userMentioned {
   font-weight: bold;
   font-style: italic;
 }
