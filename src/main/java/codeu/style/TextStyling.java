@@ -1,5 +1,6 @@
 package codeu.style;
 
+import codeu.model.data.User;
 import codeu.model.store.basic.UserStore;
 import emoji4j.EmojiUtils;
 import java.util.ArrayList;
@@ -30,4 +31,36 @@ public class TextStyling {
      String emojified = EmojiUtils.emojify(text);
      return emojified;
    }
+
+
+   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    *  Method to style tagged users in chat differently
+    *  @param  text         String representing user's original message
+    *  @return String with a span wrapped around tagged usernames to assign it special styling properties
+    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+   public static String styleTaggedUsers(String text) {
+        List<String> taggedUsers = new ArrayList<>();
+        List<String> userNames = new ArrayList<>();
+        List<String> validTaggedUsers = new ArrayList<>();
+        String pattern = "@[A-Za-z0-9]*";
+        Pattern r = Pattern.compile(pattern);
+        Matcher m = r.matcher(text);
+        while (m.find( )) {
+          taggedUsers.add(m.group(0) );
+        }
+        for (String user : taggedUsers) {
+          userNames.add(user.substring(1,user.length()));
+        }
+        for (String userName : userNames) {
+          if(UserStore.getInstance().getUser(userName) != null) {
+              validTaggedUsers.add(userName);
+          }
+        }
+        String editedText = text;
+        for (String user : validTaggedUsers) {
+          String userWithTag = "@" + user;
+          editedText = editedText.replace(userWithTag, "<span class='userMentioned'>" + userWithTag + "</span>");
+        }
+        return editedText;
+    }
 }
