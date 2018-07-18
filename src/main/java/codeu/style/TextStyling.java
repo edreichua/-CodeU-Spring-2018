@@ -32,6 +32,33 @@ public class TextStyling {
       return emojified;
     }
 
+
+   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    *  Method to parse valid usernames mentioned in the chat
+    *  @param  text         String representing user's original message
+    *  @return ArrayList of valid tageed users
+    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    public static List<String> parseValidUsers(String text){
+      List<String> taggedUsers = new ArrayList<>();
+      List<String> userNames = new ArrayList<>();
+      List<String> validTaggedUsers = new ArrayList<>();
+      String pattern = "@[A-Za-z0-9]*";
+      Pattern r = Pattern.compile(pattern);
+      Matcher m = r.matcher(text);
+      while (m.find( )) {
+        taggedUsers.add(m.group(0) );
+      }
+      for (String user : taggedUsers) {
+        userNames.add(user.substring(1,user.length()));
+      }
+      for (String userName : userNames) {
+        if(UserStore.getInstance().getUser(userName) != null) {
+          validTaggedUsers.add(userName);
+        }
+        return validTaggedUsers;
+      }
+    }
+
    /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     *  Method to style tagged users in chat differently
     *  @param  text         String representing user's original message
