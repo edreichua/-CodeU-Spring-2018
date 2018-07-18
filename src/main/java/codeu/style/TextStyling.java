@@ -55,8 +55,8 @@ public class TextStyling {
         if(UserStore.getInstance().getUser(userName) != null) {
           validTaggedUsers.add(userName);
         }
-        return validTaggedUsers;
       }
+      return validTaggedUsers;
     }
 
    /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
