@@ -48,7 +48,7 @@ nav a {
 }
 
 h1 {
-  color: #757575;
+  color: #551a8b
 }
 
 #welcome-bullets {
@@ -63,8 +63,14 @@ a {
   text-decoration: none;
 }
 
+#chatInput{
+  margin-top: 10px;
+}
+
 button {
+  border-radius: 40px;
   font-size: 18px;
+  padding: 5px 10px 5px 10px;
 }
 
 .BBCodeDropdown {
@@ -132,8 +138,8 @@ button {
 }
 
 .userMentioned {
-  font-weight: bold;
-  font-style: italic;
   color: #444;
+  font-style: italic;
+  font-weight: bold;
   text-shadow: 2px 1px #A1E4FF;
 }
